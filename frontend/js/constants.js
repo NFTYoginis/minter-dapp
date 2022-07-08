@@ -3,7 +3,7 @@ const chain = 'rinkeby'; // rinkeby, polygon, or ethereum
 
 const welcome_h1 = "Welcome to the NFT Yoginis - Goddess Collection";
 const welcome_h2 = "Please connect to MetaMask to Get Started";
-const welcome_p = "When mint an NFTYoginis Goddess you spread yoga within the Web 3 Universe. This is your chance to bring Kali's energy back!";
+const welcome_p = "When mint an NFTYoginis Goddess you spread yoga within the Web 3 Universe. This is your chance to bring Kali's energy!";
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
 const h1_presale_mint = "Pre-Sale Minting Open!!";
 const h1_public_mint = "Public Minting Open!!";
