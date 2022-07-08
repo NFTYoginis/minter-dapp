@@ -8,11 +8,11 @@
   --font-primary: "Montserrat", sans-serif;
   --font-secondary: "Mukta", serif;
   --font-code: "Splash", monospace;
-  --bg-color: #5983d0;
+  --bg-color: #417cea;
   --bg-color-transparent: #29303e80;
-  --font-color: #e9520d;
+  --font-color: #f3eeeb;
   --btn-bg-color: #ffffff;
-  --accent-color: #ccf38e;
+  --accent-color: #247eeb;
   --header-shadow: var(--accent-color) 0px 0px 3px;
   --card-shadow: var(--accent-color) 0px 0px 10px;
 }
