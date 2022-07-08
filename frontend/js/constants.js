@@ -1,9 +1,10 @@
 const contractAddress = "0x07e558819a1BBaa4496e6a3ECc06b4786d6303EB"; // Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby, polygon, or ethereum
 
-const welcome_h1 = "Welcome to the Yoginis Goddess empower the Metaverse Project!!";
+const welcome_h1 = "Welcome to the NFT Yoginis - Goddess Collection";
 const welcome_h2 = "Please connect to MetaMask to Get Started";
-const welcome_p = 'When you mint an NFTYoginis Goddess you spread yoga within the Web 3 Universe. Each Goddess grants access to member only benefits, with lifetime access to events in the Metaverse and the Real World.';
+const welcome_p1 = 'When you mint an NFTYoginis Goddess you spread yoga within the Web 3 Universe.';
+const welcome_p2 = 'Each Goddess grants access to member only benefits, with lifetime access to events in the Metaverse and the Real World.'
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
 const h1_presale_mint = "Pre-Sale Minting Open!!";
 const h1_public_mint = "Public Minting Open!!";
