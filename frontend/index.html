@@ -1,219 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>NFTYoginis Goddess Collection</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+	<title> NFT Yoginis Goddess Collection </title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- favicon -->
+	<link
+	rel="apple-touch-icon"
+	sizes="180x180"
+	href="images/x-icon/apple-touch-icon.png"
 
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/x-icon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/x-icon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/x-icon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/x-icon/site.webmanifest" />
-    <link rel="stylesheet" href="css/three-dots.min.css" />
-    <link rel="stylesheet" href="css/splide.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <a href="/">
-            <img src="images/x-icon/favicon-32x32.png" alt="logo" />
-          </a>
-        </div>
-        <div class="menu">
-          <a
-            href="https://discord.gg/2J5QJfGKUD"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="images/header/discord.webp" alt="Discord" />
-          </a>
-          <a
-            href="https://twitter.com/Yoga8NFT"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="images/header/twitter.webp" alt="Twitter" />
-          </a>
-          <a
-            href="https://opensea.io/collection/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="images/header/opensea.webp" alt="Opensea" />
-          </a>
-          <button class="wallet-btn btn" id="connectWallet">
-            <span>Connect Wallet</span>
-          </button>
-        </div>
-      </div>
-    </header>
+	/>
+	<link
+	rel="icon"
+	type="image/png"
+	sizes="32x32"
+	href="images/x-icon/favicon-32x32.png"
 
-    <section class="container not-connected">
-      <div>
-        <h2 id="welcomeH2">Connect to MetaMask to Get Started</h2>
-        <h1 id="welcomeH1">Welcome to the NFTYoginis Goddess Collection!</h1>
-        <p id="welcomeP">
-        </p>
-      </div>
-    </section>
-    <section class="container">
-      <div class="countdown card">
-        <div id="countdown">
-          <ul class="count-down" data-date="">
-            <li class="clock-item">
-              <span class="count-number days">20</span>
-              <p class="count-text">Days</p>
-            </li>
+	/>
+	<link
+	rel="icon"
+	type="image/png"
+	sizes="16x16"
+	href="images/x-icon/favicon-16x16.png"
 
-            <li class="clock-item">
-              <span class="count-number hours">20</span>
-              <p class="count-text">Hour</p>
-            </li>
+	/>
+	<link rel="manifest" href="images/x-icon/site.webmanifest" />
 
-            <li class="clock-item">
-              <span class="count-number minutes">20</span>
-              <p class="count-text">Min</p>
-            </li>
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 
-            <li class="clock-item">
-              <span class="count-number seconds">20</span>
-              <p class="count-text">Sec</p>
-            </li>
-          </ul>
-          <h2 id="subHeading">Pre-Sale Countdown</h2>
-        </div>
-        <h1 id="mainHeading">NFT Drop Coming Soon!!</h1>
-        <p id="mainText">
-          Unlock Kali's New Form Very Soon!
-        </p>
-        <a
-          id="actionButton"
-          href="https://discord.gg/2J5QJfGKUD"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hero-btn btn"
-          ><span>Connect and Share!</span>
-        </a>
-        <div id="mintContainer" class="mint-container hidden">
-          <div class="info-container">
-            <div>
-              <h3>Supply</h3>
-              <p id="totalSupply">100</p>
-            </div>
-            <div>
-              <h3>Price Per Mint</h3>
-              <p id="pricePerMint">0.08 ETH</p>
-            </div>
-            <div>
-              <h3>Max</h3>
-              <p id="maxPerMint">10 per wallet</p>
-            </div>
-          </div>
-          <div class="mint-qty">
-            <span>
-              <button class="input-number-decrement btn" id="mintDecrement">–</button>
-              <input
-                id="mintInput"
-                class="input-number btn"
-                type="number"
-                value="1"
-                min="1"
-                max="5"
-              />
-              <button class="input-number-increment btn" id="mintIncrement">+</button>
-            </span>
-            <button id="setQtyMax" class="btn">SET MAX</button>
-          </div>
-          <div class="total-price-container">
-            <h3>Total</h3>
-            <p id="totalPrice">.08 ETH</p>
-          </div>
-          <button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
-        </div>
-      </div>
-      <div class="minted-container card show-card hidden">
-        <h1>🎉</h1>
-        <h2>Minted!</h2>
-        <p>Here's your trasaction link:</p>
-        <a id="mintedTxnBtn" href="" target="_blank" rel="noopener noreferrer">
-          <button class="hero-btn btn">View Transaction</button>
-        </a>
-        <p>View it in the collection:</p>
-        <a
-          id="mintedLinkBtn"
-          href="https://testnets.opensea.io/collection/teststackr-collection"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button class="hero-btn btn">View Collection</button>
-        </a>
-      </div>
-    </section>
+	/>
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/solid.min.css"
 
-    <div id="spinner" class="dot-spin"></div>
+	/>
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/brands.min.css"
 
-    <div class="splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="images/slider/0.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/1.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/2.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/3.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/4.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/5.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/6.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/7.png" />
-          </li>
-          <li class="splide__slide">
-            <img src="images/slider/8.png" />
-          </li>
-        </li>
-        <li class="splide__slide">
-          <img src="images/slider/9.png" />
-        </li>
-        </ul>
-      </div>
-    </div>
+	/>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <script src="js/metamask-onboarding.bundle.js"></script>
-    <script src="js/web3.min.js"></script>
-    <script src="js/splide.min.js"></script>
-    <script src="js/constants.js"></script>
-    <script src="js/abi.js"></script>
-    <script src="js/countdown.js"></script>
-    <script src="js/app.js"></script>
-  </body>
-</html>
+	<link rel="stylesheet" href="css/three-dots.min.css" />
+
+	<link rel="stylesheet" href="css/splide.min.css" />
+
+	<link rel="stylesheet" href="css/style.css" />
+
+	</head>
+	<body>
+	<header>
+	<div class="container">
+	<div class="logo">
+	<a href="/">
+
+	<img src="images/header/Logo.webp" alt="logo" />
+	</a>
+	</div>
+	<div class="menu">
+	<a
+	href="https://discord.gg/FXG46z2a6D"
+
+	target="_blank"
+	rel="noopener noreferrer"
+	>
+	<img src="images/header/discord.webp" alt="Discord" />
+
+	</a>
+	<a
+	href="https://twitter.com/Yoga8NFT"
+
+	target="_blank"
+	rel="noopener noreferrer"
+	>
+	<img src="images/header/twitter.webp" alt="Twitter" />
+
+	</a>
+	<a
+	href="https://opensea.io/collection/Goddessz-xyz"
+
+	target="_blank"
+	rel="noopener noreferrer"
+	>
+	<img src="images/header/opensea.webp" alt="Opensea" />
+
+	</a>
+	<button class="wallet-btn btn" id="connectWallet">
+	<span>Connect Wallet</span>
+	</button>
+	</div>
+	</div>
+	</header>
+	
+	<div class="main-wrapper">
+	<section class="container not-connected">
+	<div>
+	<h2 id="welcomeH2">Connect to MetaMask to Get Started</h2>
+	<h1 id="welcomeH1"> Welcome to the NFTYoginis Goddess Collection!</h1>
+	<p id="welcomeP">
+	</p>
+	<br />
+	<button
+	id="connectWalletActionBtn"
+	class="hero-btn btn"
+	><span>Connect to MetaMask!</span>
+	</butt>
+	</div>
+	</section>
+	
+	<section class="container countdown-container">
+	<div class="countdown card">
+	<div id="countdown">
+	<ul class="count-down" data-date="">
+	<li class="clock-item">
+	<span class="count-number days">20</span>
+	<p class="count-text">Days</p>
+	</li>
+	
+	<li class="clock-item">
+	<span class="count-number hours">20</span>
+	<p class="count-text">Hour</p>
+	</li>
+	
+	<li class="clock-item">
+	<span class="count-number minutes">20</span>
+	<p class="count-text">Min</p>
+	</li>
+	
+	<li class="clock-item">
+	<span class="count-number seconds">20</span>
+	<p class="count-text">Sec</p>
+	</li>
+	</ul>
+	<h2 id="subHeading">Pre-Sale Countdown</h2>
+	</div>
+	<h1 id="mainHeading">NFT Drop Coming Soon!!</h1>
+	<p id="mainText">
+	Unleash the Goddess will be available very soon!
+	</p>
+	<a
+	id="actionButton"
+	href="https://discord.gg/st6jp5PQ"
+	target="_blank"
+	rel="noopener noreferrer"
+	class="hero-btn btn"
+	><span>Join the Community</span>
+	</a>
+	<div id="mintContainer" class="mint-container hidden">
+	<div class="info-container">
+	<div>
+	<h3>Supply</h3>
+	<p id="totalSupply">100</p>
+	</div>
+	<div>
+	<h3>Price Per Mint</h3>
+	<p id="pricePerMint">1 ETH</p>
+	</div>
+	<div>
+	<h3>Max</h3>
+	<p id="maxPerMint">10 per wallet</p>
+	</div>
+	</div>
+	<div class="mint-qty">
+	<span>
+	<button class="input-number-decrement btn" id="mintDecrement">
+	–
+	</button>
+	<input
+	id="mintInput"
+	class="input-number btn"
+	type="number"
+	value="1"
+	min="1"
+	max="5"
+	/>
+	<button class="input-number-increment btn" id="mintIncrement">
+	+
+	</button>
+	</span>
+	<button id="setQtyMax" class="btn">SET MAX</button>
+	</div>
+	<div class="total-price-container">
+	<h3>Total</h3>
+	<p id="totalPrice">.001 ETH</p>
+	</div>
+	<button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
+	</div>
+	</div>
+	<div class="minted-container card show-card hidden">
+	<h1>🎉</h1>
+	<h2>Minted!</h2>
+	<p>Here's your trasaction link:</p>
+	<a
+	id="mintedTxnBtn"
+	href=""
+	target="_blank"
+	rel="noopener noreferrer"
+	>
+	<button class="hero-btn btn">View Transaction</button>
+	</a>
+	<p>View it in the collection:</p>
+	<a
+	id="mintedLinkBtn"
+	href="https://opensea.io/collection/Goddessz-xyz"
+
+	target="_blank"
+	rel="noopener noreferrer"
+	>
+	<button class="hero-btn btn">View Collection</button>
+	</a>
+	</div>
+	</section>
+	
+	<div class="splide">
+	<div class="splide__track">
+	<ul class="splide__list">
+	<li class="splide__slide">
+	<img src="images/slider/0.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/1.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/2.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/3.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/4.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/5.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/6.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/7.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/8.png" />
+	</li>
+	</ul>
+	</div>
+	</div>
+	</div>
+	
+	<section class="collaboration">
+	<div class="container">
+	<h1>A Collaboration</h1>
+	<p>The <strong>Goddess NFT Project</strong> is a decentralized, open-source project that aims to bring a new concept to the Yoga and Wellness Metaverse. The NFT Goddess Collection is the crypto version of the popular series <a href="https://www.nftyoginis.com " target="_blank" rel="noopener noreferrer">"NFT Yoginis"</a> as a re-imagined Kali Goddess in unique, originally created and hand drawn, 8888 NFT collection, living forever on the Polygon blockchain.</p>
+	<p><strong>Goddessz</strong> is a collaborative project created by two brothers - Rick & Jesse. One code developer (Jesse), and one visual artist (Rick). Right brain and left brain colliding to create...one brain!...and one of the most unique NFT events yet in this space!</p>
+	<div class="flex">
+	<p>Multi award winning YouTube entrepreneur, Jesse of <strong>@codeSTACKr</strong> fame...has created and made available to the public (free of charge) his latest cutting edge step by step explanation of how to create your own 10K NFT minting site, with waitlisting...in a way that can be understood without web3 knowledge. The only element missing to create this video was the actual art to be minted.</p><span><a href="https://youtu.be/cLB7u0KQFIs" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/cLB7u0KQFIs/maxresdefault.jpg" alt=""></a></span>
+	</div>
+	<p>That's where brother Rick of "BE THE BIRD" fame comes in. After a lifetime of painting birds in traditional media such as oil & acrylics, Rick now paints digitally and sells his NFT art on popular blockchain platforms. <strong>Goddessz</strong> can only be minted <em>HERE</em>. Once minted, your NFTs will show up on OpenSea.io in the <a href="https://opensea.io/collection/Goddessz-xyz" target="_blank" rel="noopener noreferrer">Goddess collection</a>.</p>
+	<p>"Unleash the Goddess", along with her cryptic NFT version - <strong>"Goddess Collection"</strong>, was created with a message in mind. A reminder that you and every person in the universe is Unique. There is not another Goddess quite like you. You are one of a kind.</p>
+	<blockquote>- "You already have Power... Unleash the Goddess!"</p></blockquote>
+	<div class="collabs">
+	<a href="https://www.nftyoginis.com" target="_blank" rel="noopener noreferrer" class="collab">
+	<img src="images/collab/1.png" alt="Unleash the Goddess" />
+	<h2>Be The Bird</h2>
+	</a>
+	</div>
+	</div>
+	</section>
+	
+	<section>
+	<div class="splide-2">
+	<div class="splide__track">
+	<ul class="splide__list">
+	<li class="splide__slide">
+	<img src="images/slider/0.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/1.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/2.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/3.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/4.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/5.png" />
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/6.png" />
+	</li>
+	</ul>
+	</div>
+	</div>
+	
+	<div class="container roadmap">
+	<h1>Roadmap</h1>
+	</div>
+	<div class="wrapper">
+	<div class="center-line">
+	<a href="#" class="scroll-down"><i class="fas fa-claret-up"></i></a>
+
+	</div>
+	<div class="row row-1" data-aos="fade-right" data-aos-offset="200">
+	<section>
+	<i class="icon fa-solid fa-egg"></i>
+	<div class="details">
+	<span class="title">Waitlisting</span>
+	<span>August 2, 2022</span>
+	</div>
+	<p>
+	Get on the waitlist now! The first <strong>333</strong> will get <strong>1 FREE</strong> for every <strong>1</strong> you mint. Every waitlisted address can mint up to 10 Goddess. That means you can mint up to 20 Goddess in total for the price of 10.
+	</p>
+	<div class="bottom">
+	<a href="https://discord.gg/st6jp5PQ" target="_blank" rel="noopener noreferrer">Get Waitlisted!</a>
+	</div>
+	</section>
+	</div>
+	<div class="row row-2" data-aos="fade-left" data-aos-offset="200">
+	<section>
+	<i class="icon fa-brands fa-earlybirds"></i>
+	<div class="details">
+	<span class="title">Pre-Sale</span>
+	<span>August 2, 2022</span>
+	</div>
+	<p>
+	Don't miss out on the pre-sale! The first <strong>333</strong> waitlisted accounts will receive a <strong>FREE</strong> Goddess for every Goddess they mint.<br>
+	</p>
+	</section>
+	</div>
+	<div class="row row-1" data-aos="fade-right" data-aos-offset="200">
+	<section>
+	<i class="icon fa-solid fa-shopping-cart"></i>
+	<div class="details">
+	<span class="title">Public Sale</span>
+	<span>September 3, 2022</span>
+	</div>
+	<p>
+	Public sale starts. No waitlist needed. Mint away!
+	</p>
+	</section>
+	</div>
+	<div class="row row-2" data-aos="fade-left" data-aos-offset="200">
+	<section>
+	<i class="icon fa-solid fa-gift"></i>
+	<div class="details">
+	<span class="title">Giveaway</span>
+	<span>25%</span>
+	</div>
+	<p>
+	10 random holders will get a physical print of one of their Goddess.
+	</p>
+	</section>
+	</div>
+	<div class="row row-1" data-aos="fade-right" data-aos-offset="200">
+	<section>
+	<i class="icon fa-solid fa-toolbox"></i>
+	<div class="details">
+	<span class="title">Rarity.tools</span>
+	<span>50%</span>
+	</div>
+	<p>
+	Rarity tools activation.
+	</p>
+	</section>
+	</div>
+	<div class="row row-2" data-aos="fade-left" data-aos-offset="200">
+	<section>
+	<i class="icon fas fa-paper-plane"></i>
+	<div class="details">
+	<span class="title">Animated Airdrops</span>
+	<span>75%</span>
+	</div>
+	<p>
+	10 random holders will receive an original animated version of their Goddess airdropped to them.
+	</p>
+	</section>
+	</div>
+	<div class="row row-1" data-aos="fade-right" data-aos-offset="200">
+	<section>
+	<i class="icon fa-solid fa-store"></i>
+	<div class="details">
+	<span class="title">Merch Store</span>
+	<span>100%</span>
+	</div>
+	<p>
+	Merch store opens and 10 random holders get $100 to spend.
+	</p>
+	</section>
+	</div>
+	<div class="roadmap-v2" data-aos="fade-up" data-aos-offset="200">
+	<p>Roadmap v2 Coming!</p>
+	</div>
+	</div>
+	
+	<section class="team">
+	<div class="container">
+	<h1>Meet The Team</h1>
+	<div class="row">
+	<div class="member" data-aos="zoom-in" data-aos-offset="200">
+	<div class="member-img">
+	<img src="images/team/Gaby.png" alt="member">
+	</div>
+	<div class="member-info">
+	<h2>Goddess Fire</h2>
+	<p>Program Manager</p>
+	</div>
+	</div>
+	<div class="member" data-aos="zoom-in" data-aos-delay="200" data-aos-offset="200">
+	<div class="member-img">
+	<img src="images/team/Joy.png" alt="member">
+	</div>
+	<div class="member-info">
+	<h2>Goddess Air</h2>
+	<p>Creative Director</p>
+	</div>
+	</div>
+	<div class="member" data-aos="zoom-in" data-aos-delay="400" data-aos-offset="200">
+	<div class="member-img">
+	<img src="images/team/Mark.png" alt="member"> 
+	</div>
+	<div class="member-info">
+	<h2>Goddess Sky</h2>
+	<p>Marketing Director</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</section>
+	
+	<section class="faq">
+	<div class="container">
+	<h1>FAQ</h1>
+	<ul>
+	<li>
+	<input id="firstFaq" type="checkbox">
+	<i></i>
+	<h2>Why Should I Mint During The Pre-Sale?</h2>
+	<p>Everyone waitlisted will be able to mint up to 10 <strong>Goddesses</strong>. During the Pre-Sale, the first <strong>333</strong> waitlisted will get 1 FREE <strong>Goddess</strong> for every 1 you mint! The free <strong>Goddess</strong> will be transferred to your wallet at the end of the pre-sale.</p>
+	
+	</li>
+	<li>
+	<input type="checkbox" checked>
+	<i></i>
+	<h2>What Are The Benefits of Owning a <strong>NFT Yoginis Goddess</strong>?</h2>
+	<p>Owning a <strong>NFT Yoginis Goddess</strong> means you want to support Yoga, Wellness and Social Connection. As an owner, you will have access to Live Yoga Festival and Retreats, Metaverse access to nutrition, yoga, meditation and lifestyle courses, as well as 20% off all orders from the <a href=https://www.nftyoginis.com" target="_blank" rel="noopener noreferrer">"Goddess Avatar"</a> store. Yoga Teacher Training Scholarships, Yoga Retreat coupons and More utility will be introduced in the Roadmap v2.</p>
+	</li>
+	<li>
+	<input type="checkbox" checked>
+	<i></i>
+	<h2>What Chain Do <strong>NFT Yoginis – Goddess Collection</strong> Roam At?</h2>
+	<p>Polygon. The <a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer">Polygon</a> chain is a layer 2 Ethereum chain and provides greatly reduced gas fees.</p>
+	</li>
+	<li>
+	<input type="checkbox" checked>
+	<i></i>
+	<h2>What Is The Mint Price?</h2>
+	<p>8 MATIC.<br>To get MATIC on the Polygon chain, use your favorite exchange such as <a href="https://transak.com/" target="_blank" rel="noopener noreferrer">Transak</a>.</p>
+	</li>
+	<li>
+	<input type="checkbox" checked>
+	<i></i>
+	<h2>How Long Will The Pre-Sale Last?</h2>
+	<p>Waitlisting starts <strong>August 2, 2022</strong>.<br>Pre-Sale starts <strong>August 2, 2022 at 2:00 PM UTC</strong>.<br>Pubic Sale starts <strong>September 5, 2022 at 2:00 PM UTC</strong></p>
+	</li>
+	<li>
+	<input type="checkbox" checked>
+	<i></i>
+	<h2>Which Marketplace Will <strong>Goddess Collection</strong> Be Listed On?</h2>
+	<p>Once your <strong>Goddess</strong> is minted, it will be listed on OpenSea under the <a href="https://opensea.io/collection/Goddessz-xyz" target="_blank" rel="noopener noreferrer">NFT Yoginis – Goddess</a> Collection.</p>
+	</li>
+	</ul>
+	</div>
+	</section>
+	
+	<footer>Copyright &copy; NFT Yoginis 2022</footer>
+	
+	<div id="spinner" class="dot-spin"></div>
+	
+	<script src="js/metamask-onboarding.bundle.js"></script>
+
+	<script src="js/web3.min.js"></script>
+
+	<script src="js/splide.min.js"></script>
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script src="js/constants.js"></script>
+
+	<script src="js/countdown.js"></script>
+
+	<script src="js/app.js"></script>
+
+	<script>
+	AOS.init({
+	disable: 'phone'
+	});
+	</script>
+	</body>
+	</html>
+	
