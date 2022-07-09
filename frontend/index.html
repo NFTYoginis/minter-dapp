@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+	<html lang="en">
 	<head>
-	<title> NFT Yoginis Goddess Collection </title>
+	<title>NFTYoginis Goddess Collection</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,30 +10,45 @@
 	<link
 	rel="apple-touch-icon"
 	sizes="180x180"
-	href="images/x-icon/apple-touch-icon.png" />
+	href="images/x-icon/apple-touch-icon.png"
+
+	/>
 	<link
 	rel="icon"
 	type="image/png"
 	sizes="32x32"
-	href="images/x-icon/favicon-32x32.png"/>
+	href="images/x-icon/favicon-32x32.png"
+
+	/>
 	<link
 	rel="icon"
 	type="image/png"
 	sizes="16x16"
-	href="images/x-icon/favicon-16x16.png"/>
-	
-  <link rel="stylesheet" href="css/three-dots.min.css" />
+	href="images/x-icon/favicon-16x16.png"
+
+	/>
+	<link rel="manifest" href="images/x-icon/site.webmanifest" />
+
+	<link rel="stylesheet" href="css/three-dots.min.css" />
+
 	<link rel="stylesheet" href="css/splide.min.css" />
+
 	<link rel="stylesheet" href="css/style.css" />
 
 	</head>
 	<body>
 	<header>
 	<div class="container">
+	<div class="logo">
+	<a href="/">
+
+	<img src="images/x-icon/favicon-32x32.png" alt="logo" />
+
+	</a>
 	</div>
 	<div class="menu">
 	<a
-	href="https://discord.gg/FXG46z2a6D"
+	href="https://discord.gg/2J5QJfGKUD"
 
 	target="_blank"
 	rel="noopener noreferrer"
@@ -50,31 +65,31 @@
 	<img src="images/header/twitter.webp" alt="Twitter" />
 
 	</a>
-	<a href="https://opensea.io/collection/NFTYoginis"
-  target="_blank"
-	rel="noopener noreferrer">
+	<a
+	href="https://opensea.io/collection/"
+
+	target="_blank"
+	rel="noopener noreferrer"
+	>
 	<img src="images/header/opensea.webp" alt="Opensea" />
 
-
+	</a>
+	<button class="wallet-btn btn" id="connectWallet">
+	<span>Connect Wallet</span>
+	</button>
+	</div>
 	</div>
 	</header>
-	<div class="main-wrapper">
+	
 	<section class="container not-connected">
 	<div>
 	<h2 id="welcomeH2">Connect to MetaMask to Get Started</h2>
-	<h1 id="welcomeH1"> Welcome to the NFTYoginis Goddess Collection!</h1>
+	<h1 id="welcomeH1">Welcome to the NFTYoginis Goddess Collection!</h1>
 	<p id="welcomeP">
 	</p>
-	<br />
-	<button
-	id="connectWalletActionBtn"
-	class="hero-btn btn"
-	><span>Connect to MetaMask!</span>
-	</butt>
 	</div>
 	</section>
-	
-	<section class="container countdown-container">
+	<section class="container">
 	<div class="countdown card">
 	<div id="countdown">
 	<ul class="count-down" data-date="">
@@ -102,15 +117,16 @@
 	</div>
 	<h1 id="mainHeading">NFT Drop Coming Soon!!</h1>
 	<p id="mainText">
-	Unleash the Goddess will be available very soon!
+	Unlock Kali's New Form Very Soon!
 	</p>
 	<a
 	id="actionButton"
-	href="https://discord.gg/st6jp5PQ"
+	href="https://discord.gg/2J5QJfGKUD"
+
 	target="_blank"
 	rel="noopener noreferrer"
 	class="hero-btn btn"
-	><span>Join the Community</span>
+	><span>Connect and Share!</span>
 	</a>
 	<div id="mintContainer" class="mint-container hidden">
 	<div class="info-container">
@@ -120,7 +136,7 @@
 	</div>
 	<div>
 	<h3>Price Per Mint</h3>
-	<p id="pricePerMint">1 ETH</p>
+	<p id="pricePerMint">0.08 ETH</p>
 	</div>
 	<div>
 	<h3>Max</h3>
@@ -128,26 +144,23 @@
 	</div>
 	</div>
 	<div class="mint-qty">
-    <span>
-      <button class="input-number-decrement btn" id="mintDecrement">
-      </button>
-      <input
+	<span>
+	<button class="input-number-decrement btn" id="mintDecrement">–</button>
+	<input
 	id="mintInput"
 	class="input-number btn"
 	type="number"
 	value="1"
 	min="1"
-	max="10"
+	max="5"
 	/>
-	<button class="input-number-increment btn" id="mintIncrement">
-	+
-	</button>
+	<button class="input-number-increment btn" id="mintIncrement">+</button>
 	</span>
 	<button id="setQtyMax" class="btn">SET MAX</button>
 	</div>
 	<div class="total-price-container">
 	<h3>Total</h3>
-	<p id="totalPrice">.001 ETH</p>
+	<p id="totalPrice">.08 ETH</p>
 	</div>
 	<button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
 	</div>
@@ -156,18 +169,13 @@
 	<h1>🎉</h1>
 	<h2>Minted!</h2>
 	<p>Here's your trasaction link:</p>
-	<a
-	id="mintedTxnBtn"
-	href=""
-	target="_blank"
-	rel="noopener noreferrer"
-	>
+	<a id="mintedTxnBtn" href="" target="_blank" rel="noopener noreferrer">
 	<button class="hero-btn btn">View Transaction</button>
 	</a>
 	<p>View it in the collection:</p>
 	<a
 	id="mintedLinkBtn"
-	href="https://opensea.io/collection/NFTYoginis"
+	href="https://testnets.opensea.io/collection/teststackr-collection"
 
 	target="_blank"
 	rel="noopener noreferrer"
@@ -177,31 +185,58 @@
 	</div>
 	</section>
 	
+	<div id="spinner" class="dot-spin"></div>
+	
 	<div class="splide">
 	<div class="splide__track">
 	<ul class="splide__list">
 	<li class="splide__slide">
 	<img src="images/slider/0.png" />
+
 	</li>
 	<li class="splide__slide">
 	<img src="images/slider/1.png" />
+
 	</li>
 	<li class="splide__slide">
 	<img src="images/slider/2.png" />
+
 	</li>
 	<li class="splide__slide">
 	<img src="images/slider/3.png" />
+
 	</li>
 	<li class="splide__slide">
 	<img src="images/slider/4.png" />
+
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/5.png" />
+
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/6.png" />
+
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/7.png" />
+
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/8.png" />
+
+	</li>
+	</li>
+	<li class="splide__slide">
+	<img src="images/slider/9.png" />
+
 	</li>
 	</ul>
 	</div>
 	</div>
-	</div>
+
 	
 	<section class="collaboration">
-	<div class="container">
 	<h1>A Collaboration</h1>
 	<p>The <strong>Goddess NFT Project</strong> is a decentralized, open source project to empower practitioners, teachers and the world.
 	<p>"Unleash the Goddess", along with her cryptic NFT version - <strong>"Goddess Collection"</strong>, was created with a message in mind. A reminder that you and every person in the universe is Unique. There is not another Goddess quite like you. You are one of a kind.</p>
@@ -210,7 +245,6 @@
 	<img src="images/collab/1.png" alt="Unleash the Goddess" />
 	<h2>Unleash the Goddess</h2>
 	</a>
-	</div>
 	</section>
 	
 	<div class="container roadmap">
