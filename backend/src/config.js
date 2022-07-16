@@ -249,7 +249,7 @@ const layerConfigurations = [
       {
       growEditionSizeTo: 6300,
       layersOrder: [
-      { name: "Background" },
+      { name: "Background" }, options: { blend: MODE.colorBurn, } },
       { name: "Halo" }, 
       { name: "Brown Base" },
       { name: "Brown Mouth" },
@@ -296,7 +296,7 @@ const layerConfigurations = [
       {
       growEditionSizeTo: 7500,
       layersOrder: [
-      { name: "Background" },
+      { name: "Background" }, options: { blend: MODE.colorBurn, } },
       { name: "Base Skin Color" },
       { name: "Mouth" },
       { name: "Nose" },
